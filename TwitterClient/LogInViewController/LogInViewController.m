@@ -7,7 +7,7 @@
 //
 
 #import "LogInViewController.h"
-
+#import "UserFollowersListViewController.h"
 @interface LogInViewController ()
 
 @end
@@ -38,6 +38,7 @@
             [[NSUserDefaults standardUserDefaults]setObject:session.authToken forKey:AUTH_TOKEN];
             [[NSUserDefaults standardUserDefaults]setObject:session.authTokenSecret forKey:AUTH_TOKEN_SECRET];
             [[NSUserDefaults standardUserDefaults]synchronize];
+            [self.navigationController pushViewController:[[UserFollowersListViewController alloc]init] animated:YES];
 
             
         }
