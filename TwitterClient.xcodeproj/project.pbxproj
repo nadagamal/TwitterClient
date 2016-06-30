@@ -12,6 +12,9 @@
 		692D51221D245A3700E621E2 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 692D51201D245A3700E621E2 /* LogInViewController.xib */; };
 		692D51281D24B19E00E621E2 /* UserFollowersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 692D51261D24B19E00E621E2 /* UserFollowersListViewController.m */; };
 		692D51291D24B19F00E621E2 /* UserFollowersListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 692D51271D24B19E00E621E2 /* UserFollowersListViewController.xib */; };
+		692D512D1D251F8200E621E2 /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692D512C1D251F8200E621E2 /* WebServiceManager.m */; };
+		692D51331D256D3400E621E2 /* FollowersList.m in Sources */ = {isa = PBXBuildFile; fileRef = 692D51301D256D3400E621E2 /* FollowersList.m */; };
+		692D51341D256D3400E621E2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 692D51321D256D3400E621E2 /* User.m */; };
 		697A95B61D22EBA7006F3ECC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 697A95B51D22EBA7006F3ECC /* main.m */; };
 		697A95B91D22EBA7006F3ECC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 697A95B81D22EBA7006F3ECC /* AppDelegate.m */; };
 		697A95BC1D22EBA7006F3ECC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697A95BB1D22EBA7006F3ECC /* ViewController.m */; };
@@ -31,6 +34,12 @@
 		692D51251D24B19E00E621E2 /* UserFollowersListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFollowersListViewController.h; sourceTree = "<group>"; };
 		692D51261D24B19E00E621E2 /* UserFollowersListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFollowersListViewController.m; sourceTree = "<group>"; };
 		692D51271D24B19E00E621E2 /* UserFollowersListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserFollowersListViewController.xib; sourceTree = "<group>"; };
+		692D512B1D251F8200E621E2 /* WebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceManager.h; sourceTree = "<group>"; };
+		692D512C1D251F8200E621E2 /* WebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceManager.m; sourceTree = "<group>"; };
+		692D512F1D256D3400E621E2 /* FollowersList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersList.h; sourceTree = "<group>"; };
+		692D51301D256D3400E621E2 /* FollowersList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersList.m; sourceTree = "<group>"; };
+		692D51311D256D3400E621E2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		692D51321D256D3400E621E2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		697A95B11D22EBA7006F3ECC /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		697A95B51D22EBA7006F3ECC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		697A95B71D22EBA7006F3ECC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +93,26 @@
 			path = UserFollowersListViewController;
 			sourceTree = "<group>";
 		};
+		692D512A1D251F7100E621E2 /* WebServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				692D512B1D251F8200E621E2 /* WebServiceManager.h */,
+				692D512C1D251F8200E621E2 /* WebServiceManager.m */,
+			);
+			path = WebServiceManager;
+			sourceTree = "<group>";
+		};
+		692D512E1D256D2700E621E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				692D512F1D256D3400E621E2 /* FollowersList.h */,
+				692D51301D256D3400E621E2 /* FollowersList.m */,
+				692D51311D256D3400E621E2 /* User.h */,
+				692D51321D256D3400E621E2 /* User.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		697A95A81D22EBA7006F3ECC = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +134,8 @@
 		697A95B31D22EBA7006F3ECC /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				692D512E1D256D2700E621E2 /* Models */,
+				692D512A1D251F7100E621E2 /* WebServiceManager */,
 				692D51241D24B15B00E621E2 /* UserFollowersListViewController */,
 				692D511D1D245A1A00E621E2 /* LogInViewController */,
 				697A95B71D22EBA7006F3ECC /* AppDelegate.h */,
@@ -276,11 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692D51341D256D3400E621E2 /* User.m in Sources */,
+				692D512D1D251F8200E621E2 /* WebServiceManager.m in Sources */,
 				692D51211D245A3700E621E2 /* LogInViewController.m in Sources */,
 				697A95BC1D22EBA7006F3ECC /* ViewController.m in Sources */,
 				697A95B91D22EBA7006F3ECC /* AppDelegate.m in Sources */,
 				692D51281D24B19E00E621E2 /* UserFollowersListViewController.m in Sources */,
 				697A95B61D22EBA7006F3ECC /* main.m in Sources */,
+				692D51331D256D3400E621E2 /* FollowersList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
