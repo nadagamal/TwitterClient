@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController">
+            <connections>
+                <outlet property="loginBtn" destination="XcC-0b-tFz" id="JcZ-qO-Gtl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcC-0b-tFz" customClass="TWTRLogInButton">
+                    <rect key="frame" x="156" y="514" width="289" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="289" id="Qgf-Fu-hrn"/>
+                        <constraint firstAttribute="height" constant="49" id="Ywa-sr-MTe"/>
+                        <constraint firstAttribute="height" constant="49" id="nrq-zo-cJD"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="nrq-zo-cJD"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="nrq-zo-cJD"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="loginBtnPressed:" destination="-1" eventType="touchUpInside" id="jjR-pG-Obo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XcC-0b-tFz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BVL-zc-zhR"/>
+                <constraint firstAttribute="bottomMargin" secondItem="XcC-0b-tFz" secondAttribute="bottom" constant="6" id="Bc3-NL-KwJ"/>
+                <constraint firstAttribute="bottom" secondItem="XcC-0b-tFz" secondAttribute="bottom" constant="37" id="GSh-zF-zwr"/>
+                <constraint firstItem="XcC-0b-tFz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bZu-Wx-hsD"/>
+                <constraint firstItem="XcC-0b-tFz" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="289:800" id="eFg-68-lvN"/>
+                <constraint firstAttribute="bottom" secondItem="XcC-0b-tFz" secondAttribute="bottom" constant="37" id="yxo-F8-EOo"/>
+                <constraint firstItem="XcC-0b-tFz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zFD-ux-W82"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="BVL-zc-zhR"/>
+                    <exclude reference="Bc3-NL-KwJ"/>
+                    <exclude reference="eFg-68-lvN"/>
+                    <exclude reference="yxo-F8-EOo"/>
+                    <exclude reference="zFD-ux-W82"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="BVL-zc-zhR"/>
+                    <include reference="yxo-F8-EOo"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="XcC-0b-tFz"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="Bc3-NL-KwJ"/>
+                    <exclude reference="GSh-zF-zwr"/>
+                    <include reference="eFg-68-lvN"/>
+                    <include reference="zFD-ux-W82"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

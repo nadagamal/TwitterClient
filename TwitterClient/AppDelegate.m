@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import <Fabric/Fabric.h>
-#import <TwitterKit/TwitterKit.h>
 #import <Crashlytics/Crashlytics.h>
+#import "LogInViewController/LogInViewController.h"
+#import "UserFollowersListViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Fabric with:@[[Crashlytics class],[Twitter class]]];
+    if([[NSUserDefaults standardUserDefaults]objectForKey:USER_NAME]!=nil)
+    self.navigationController = [[UINavigationController alloc]initWithRootViewController:[[UserFollowersListViewController alloc]init]];
+    else
+    self.navigationController = [[UINavigationController alloc]initWithRootViewController:[[LogInViewController alloc]init]];
+    
+    self.window.rootViewController = self.navigationController;
+    
     return YES;
 }
 
