@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface UserFollowersListViewController : UIViewController
+#import "FollowersList.h"
+#import "User.h"
+@interface UserFollowersListViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property(nonatomic,strong)NSMutableArray * followersList;
+@property(nonatomic,retain) UIRefreshControl *refreshControl;
 
 @end

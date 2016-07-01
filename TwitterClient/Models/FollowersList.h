@@ -1,7 +1,7 @@
 //
 //	FollowersList.h
 //
-//	Create by Nada Gamal on 30/6/2016
+//	Create by Nada Gamal on 1/7/2016
 //	Copyright © 2016. All rights reserved.
 //
 
@@ -12,9 +12,11 @@
 
 @interface FollowersList : NSObject
 
+@property (nonatomic, assign) double nextCursor;
+@property (nonatomic, strong) NSString * nextCursorStr;
+@property (nonatomic, assign) NSInteger previousCursor;
+@property (nonatomic, strong) NSString * previousCursorStr;
 @property (nonatomic, strong) NSArray * users;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
--(NSDictionary *)toDictionary;
 @end

@@ -12,5 +12,5 @@
 #define USER_ID @"userID"
 #define AUTH_TOKEN @"authToken"
 #define AUTH_TOKEN_SECRET @"authTokenSecret"
-
+static NSString * kGetFollowersList=@"https://api.twitter.com/1.1/followers/list.json";
 #endif /* Constants_h */

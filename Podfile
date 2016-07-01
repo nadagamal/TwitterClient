@@ -8,6 +8,6 @@ pod 'Fabric'
 pod 'TwitterKit'
 pod 'Crashlytics'
 pod 'AFNetworking', '~> 3.0'
-
+pod 'SDWebImage', '~>3.8'
 end
 

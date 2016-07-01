@@ -21,6 +21,8 @@
 		697A95BF1D22EBA7006F3ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697A95BD1D22EBA7006F3ECC /* Main.storyboard */; };
 		697A95C11D22EBA7006F3ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697A95C01D22EBA7006F3ECC /* Assets.xcassets */; };
 		697A95C41D22EBA7006F3ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697A95C21D22EBA7006F3ECC /* LaunchScreen.storyboard */; };
+		69F84E591D25C141002E22E8 /* FollowerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F84E571D25C141002E22E8 /* FollowerTableViewCell.m */; };
+		69F84E5A1D25C141002E22E8 /* FollowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F84E581D25C141002E22E8 /* FollowerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		697A95C01D22EBA7006F3ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		697A95C31D22EBA7006F3ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		697A95C51D22EBA7006F3ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F84E561D25C141002E22E8 /* FollowerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowerTableViewCell.h; sourceTree = "<group>"; };
+		69F84E571D25C141002E22E8 /* FollowerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowerTableViewCell.m; sourceTree = "<group>"; };
+		69F84E581D25C141002E22E8 /* FollowerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowerTableViewCell.xib; sourceTree = "<group>"; };
 		DAE992C87BE24ACB2BF69E28 /* Pods-TwitterClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClient/Pods-TwitterClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +94,9 @@
 				692D51251D24B19E00E621E2 /* UserFollowersListViewController.h */,
 				692D51261D24B19E00E621E2 /* UserFollowersListViewController.m */,
 				692D51271D24B19E00E621E2 /* UserFollowersListViewController.xib */,
+				69F84E561D25C141002E22E8 /* FollowerTableViewCell.h */,
+				69F84E571D25C141002E22E8 /* FollowerTableViewCell.m */,
+				69F84E581D25C141002E22E8 /* FollowerTableViewCell.xib */,
 			);
 			path = UserFollowersListViewController;
 			sourceTree = "<group>";
@@ -234,6 +242,7 @@
 				692D51221D245A3700E621E2 /* LogInViewController.xib in Resources */,
 				697A95C41D22EBA7006F3ECC /* LaunchScreen.storyboard in Resources */,
 				697A95C11D22EBA7006F3ECC /* Assets.xcassets in Resources */,
+				69F84E5A1D25C141002E22E8 /* FollowerTableViewCell.xib in Resources */,
 				692D51291D24B19F00E621E2 /* UserFollowersListViewController.xib in Resources */,
 				697A95BF1D22EBA7006F3ECC /* Main.storyboard in Resources */,
 			);
@@ -309,6 +318,7 @@
 			files = (
 				692D51341D256D3400E621E2 /* User.m in Sources */,
 				692D512D1D251F8200E621E2 /* WebServiceManager.m in Sources */,
+				69F84E591D25C141002E22E8 /* FollowerTableViewCell.m in Sources */,
 				692D51211D245A3700E621E2 /* LogInViewController.m in Sources */,
 				697A95BC1D22EBA7006F3ECC /* ViewController.m in Sources */,
 				697A95B91D22EBA7006F3ECC /* AppDelegate.m in Sources */,

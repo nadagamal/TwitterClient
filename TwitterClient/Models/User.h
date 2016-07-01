@@ -53,6 +53,4 @@
 @property (nonatomic, assign) BOOL verified;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
--(NSDictionary *)toDictionary;
 @end

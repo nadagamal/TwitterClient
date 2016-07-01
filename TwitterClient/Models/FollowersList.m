@@ -1,7 +1,7 @@
 //
 //	FollowersList.m
 //
-//	Create by Nada Gamal on 30/6/2016
+//	Create by Nada Gamal on 1/7/2016
 //	Copyright © 2016. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
@@ -9,6 +9,10 @@
 
 #import "FollowersList.h"
 
+NSString *const kFollowersListNextCursor = @"next_cursor";
+NSString *const kFollowersListNextCursorStr = @"next_cursor_str";
+NSString *const kFollowersListPreviousCursor = @"previous_cursor";
+NSString *const kFollowersListPreviousCursorStr = @"previous_cursor_str";
 NSString *const kFollowersListUsers = @"users";
 
 @interface FollowersList ()
@@ -24,71 +28,30 @@ NSString *const kFollowersListUsers = @"users";
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-	self = [super init];
-	if(dictionary[kFollowersListUsers] != nil && [dictionary[kFollowersListUsers] isKindOfClass:[NSArray class]]){
-		NSArray * usersDictionaries = dictionary[kFollowersListUsers];
-		NSMutableArray * usersItems = [NSMutableArray array];
-		for(NSDictionary * usersDictionary in usersDictionaries){
-			User * usersItem = [[User alloc] initWithDictionary:usersDictionary];
-			[usersItems addObject:usersItem];
-		}
-		self.users = usersItems;
-	}
-	return self;
-}
-
-
-/**
- * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
- */
--(NSDictionary *)toDictionary
-{
-	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-	if(self.users != nil){
-		NSMutableArray * dictionaryElements = [NSMutableArray array];
-		for(User * usersElement in self.users){
-			[dictionaryElements addObject:[usersElement toDictionary]];
-		}
-		dictionary[kFollowersListUsers] = dictionaryElements;
-	}
-	return dictionary;
-
-}
-
-/**
- * Implementation of NSCoding encoding method
- */
-/**
- * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
- */
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
-	if(self.users != nil){
-		[aCoder encodeObject:self.users forKey:kFollowersListUsers];
-	}
-
-}
-
-/**
- * Implementation of NSCoding initWithCoder: method
- */
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-	self = [super init];
-	self.users = [aDecoder decodeObjectForKey:kFollowersListUsers];
-	return self;
-
-}
-
-/**
- * Implementation of NSCopying copyWithZone: method
- */
-- (instancetype)copyWithZone:(NSZone *)zone
-{
-	FollowersList *copy = [FollowersList new];
-
-	copy.users = [self.users copyWithZone:zone];
-
-	return copy;
+    self = [super init];
+    if(![dictionary[kFollowersListNextCursor] isKindOfClass:[NSNull class]]){
+        self.nextCursor = [dictionary[kFollowersListNextCursor] doubleValue];
+    }
+    
+    if(![dictionary[kFollowersListNextCursorStr] isKindOfClass:[NSNull class]]){
+        self.nextCursorStr = dictionary[kFollowersListNextCursorStr];
+    }
+    if(![dictionary[kFollowersListPreviousCursor] isKindOfClass:[NSNull class]]){
+        self.previousCursor = [dictionary[kFollowersListPreviousCursor] integerValue];
+    }
+    
+    if(![dictionary[kFollowersListPreviousCursorStr] isKindOfClass:[NSNull class]]){
+        self.previousCursorStr = dictionary[kFollowersListPreviousCursorStr];
+    }
+    if(dictionary[kFollowersListUsers] != nil && [dictionary[kFollowersListUsers] isKindOfClass:[NSArray class]]){
+        NSArray * usersDictionaries = dictionary[kFollowersListUsers];
+        NSMutableArray * usersItems = [NSMutableArray array];
+        for(NSDictionary * usersDictionary in usersDictionaries){
+            User * usersItem = [[User alloc] initWithDictionary:usersDictionary];
+            [usersItems addObject:usersItem];
+        }
+        self.users = usersItems;
+    }
+    return self;
 }
 @end
